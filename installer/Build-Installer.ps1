@@ -86,4 +86,3 @@ Write-Host "  ✔ Installateur prêt !" -ForegroundColor Green
 Write-Host "  $output" -ForegroundColor White
 Write-Host "═══════════════════════════════════════════════" -ForegroundColor DarkCyan
 Write-Host ""
-``
