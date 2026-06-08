@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter</value></resheader>
+
+  <!-- Login -->
+  <data name="Login_Password"      ><value>Mot de passe</value></data>
+  <data name="Login_Username"      ><value>Identifiant</value></data>
+  <data name="Login_Connect"       ><value>Se connecter</value></data>
+  <data name="Login_Back"          ><value>Retour</value></data>
+  <data name="Login_OtherAccount"  ><value>Autre compte</value></data>
+  <data name="Login_Quit"          ><value>Quitter</value></data>
+  <data name="Login_InvalidCreds"  ><value>Identifiants invalides.</value></data>
+  <data name="Login_Error"         ><value>Erreur : {0}</value></data>
+  <data name="Login_AdUnreachable" ><value>Impossible de joindre le serveur Active Directory ({0}). Vérifiez votre connexion réseau.</value></data>
+  <data name="Login_SelectUser"    ><value>Sélectionner un utilisateur...</value></data>
+  <data name="Login_FirstConnection"><value>Première connexion ?</value></data>
+  <data name="Login_Or"            ><value>— ou —</value></data>
+
+  <!-- Main -->
+  <data name="Main_Logout"         ><value>Déconnexion</value></data>
+  <data name="Main_NavBack"        ><value>Précédent</value></data>
+  <data name="Main_NavForward"     ><value>Suivant</value></data>
+  <data name="Main_NavRefresh"     ><value>Actualiser</value></data>
+
+  <!-- Messages -->
+  <data name="Msg_WebView2Missing" ><value>WebView2 Runtime manquant.&#10;Téléchargez-le : https://go.microsoft.com/fwlink/p/?LinkId=2124703&#10;&#10;{0}</value></data>
+  <data name="Msg_LoadError"       ><value>Impossible de charger « {0} » : {1}</value></data>
+  <data name="Msg_Error"           ><value>Erreur</value></data>
+  <data name="Msg_ConfirmDelete"   ><value>Supprimer le profil de {0} ?&#10;&#10;Ses données de navigation (mots de passe, cookies) seront également effacées.</value></data>
+  <data name="Msg_ConfirmDelete_Title"><value>Confirmer la suppression</value></data>
+</root>

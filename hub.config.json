@@ -1,0 +1,11 @@
+{
+  "AppTitle": "ANEF LOIRE",
+  "Domain": "company.lan",
+  "CacheFolder": null,
+  "FirstConnectionUrl": "https://intranet.company.lan/premiere-connexion",
+  "Apps": [
+    { "Name": "Google", "Url": "https://google.com", "OpenOnStartup": true },
+    { "Name": "Test 1", "Url": "https://test1.com/" },
+    { "Name": "Test 2", "Url": "https://test2.com/" }
+  ]
+}
