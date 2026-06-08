@@ -360,12 +360,11 @@ public partial class MainWindow : Window
         gap:16px;max-width:900px;width:100%;}
   .card{background:#fff;border-radius:12px;padding:20px 18px;text-decoration:none;
         color:#1A1A1A;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:.18s;
-        display:flex;align-items:center;gap:14px;cursor:pointer;}
+      display:flex;align-items:center;gap:14px;cursor:pointer;}
   .card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.10);}
   .pill{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;
         justify-content:center;color:#fff;font-weight:700;font-size:14px;flex-shrink:0;}
   .name{font-size:14px;font-weight:600;}
-  .url{font-size:11px;color:#8A92A0;margin-top:2px;}
 </style></head><body>
 <h1>Hub
 """);
@@ -378,13 +377,11 @@ public partial class MainWindow : Window
             var color = AvatarColor(i);
             var hex   = $"#{color.R:X2}{color.G:X2}{color.B:X2}";
             var init  = GetInitials(app.Name).Substring(0, 1);
-            sb.Append($"<a class='card' href='{System.Net.WebUtility.HtmlEncode(app.Url)}'>")
+                        sb.Append($"<a class='card' href='{System.Net.WebUtility.HtmlEncode(app.Url)}'>")
               .Append($"<div class='pill' style='background:{hex}'>{System.Net.WebUtility.HtmlEncode(init)}</div>")
-              .Append("<div><div class='name'>")
+                            .Append("<div class='name'>")
               .Append(System.Net.WebUtility.HtmlEncode(app.Name))
-              .Append("</div><div class='url'>")
-              .Append(System.Net.WebUtility.HtmlEncode(app.Url))
-              .Append("</div></div></a>");
+                            .Append("</div></a>");
         }
         sb.Append("</div></body></html>");
         return sb.ToString();
