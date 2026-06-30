@@ -79,8 +79,21 @@ public sealed class WebViewHostManager : IDisposable
                 throw new InvalidOperationException($"Impossible de créer le dossier cache : {_userDataFolder}", ex);
             }
 
+            // --auth-server-allowlist / --auth-negotiate-delegate-allowlist avec une valeur
+            // bidon (_) coupent l'authentification intégrée Windows (NTLM/Negotiate) : sinon
+            // WebView2 transmet automatiquement et silencieusement les identifiants du compte
+            // Windows de la session aux sites intranet, exactement comme Edge.
+            // msSingleSignOn / msWamBroker + AllowSingleSignOnUsingOSPrimaryAccount=false
+            // coupent le SSO vers le compte Microsoft/AAD connecté à l'OS.
             var options = new CoreWebView2EnvironmentOptions(
-                additionalBrowserArguments: "--disable-features=msSingleSignOn,msWamBroker --no-service-autorun");
+                additionalBrowserArguments:
+                    "--disable-features=msSingleSignOn,msWamBroker,msImplicitSignin,msaSingleSignOn,AadSingleSignOn " +
+                    "--no-service-autorun " +
+                    "--auth-server-allowlist=_ " +
+                    "--auth-negotiate-delegate-allowlist=_")
+            {
+                AllowSingleSignOnUsingOSPrimaryAccount = false
+            };
 
             _environment = await CoreWebView2Environment.CreateAsync(
                 browserExecutableFolder: null,
